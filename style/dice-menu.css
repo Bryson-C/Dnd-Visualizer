@@ -1,0 +1,16 @@
+#dice-menu {
+    border: black solid 1px;
+    width: min-content;
+    padding: 10px;
+    white-space: nowrap;
+}
+#dice-result {
+    border: black solid 1px;
+    min-width: 20px;
+    max-width: 100px;
+    width: 20px;
+    padding: 5px;
+    font-size: 20px;
+}
+#max-dice-number {}
+#dice-roller {}
