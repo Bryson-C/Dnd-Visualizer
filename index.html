@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>DND</title>
+
     <link rel="stylesheet" href="style/dice-menu.css">
+    <link rel="stylesheet" href="style/character-menu.css">
+
     <script src="scripts/common.js"></script>
     <script defer src="scripts/dice-menu.js"></script>
     <script defer src="scripts/character.js"></script>
 </head>
 <body>
 
+
 <div id="dice-menu">
     <button id="dice-roller">Roll</button>
-    <input id="max-dice-number" type="text" placeholder="Max Dice Count">
-    <input id="dice-count" type="text" placeholder="Dice Count">
-    <span id="dice-result">-</span>
+    <input id="max-dice-number" type="text" placeholder="Max Dice Number" value="20">
+    <input id="dice-count" type="text" placeholder="Dice Count" value="1">
+    <span id="dice-result"> </span>
 </div>
 
 
-<button onclick="console.log(randomName())">log random name</button>
+<div id="character-menu">
+    <label>Name <input type="text" id="character-name"></label>
+    &nbsp;
+    <label>Health <progress class="character-status-bar" id="health-bar" value="50" max="100"></progress></label>
+    &nbsp;
+    <label>Experience <progress class="character-status-bar" id="exp-bar" value="50" max="100"></progress></label>
+    &nbsp;
+</div>
+
+
+
+
+
 
 </body>
 </html>

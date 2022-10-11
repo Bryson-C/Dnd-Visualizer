@@ -3,6 +3,12 @@
     width: min-content;
     padding: 10px;
     white-space: nowrap;
+    font-size: 20px;
+    margin: 10px;
+}
+#dice-menu input {
+    width: 100px;
+    min-width: 50px;
 }
 #dice-result {
     border: black solid 1px;
@@ -10,7 +16,6 @@
     max-width: 100px;
     width: 20px;
     padding: 5px;
-    font-size: 20px;
 }
 #max-dice-number {}
 #dice-roller {}

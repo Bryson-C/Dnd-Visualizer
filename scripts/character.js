@@ -139,6 +139,10 @@ class Character {
         this.playerName = ''
         this.expPoints = 0
 
+		this.gold = 0
+		this.silver = 0
+		this.copper = 0
+
         this.age = 0
         this.height = 0
         this.weight = 0
@@ -193,4 +197,8 @@ class Character {
         this.spellSlots = 0
     };
 
+}
+
+if (getElem('#character-name').innerText.length <= 0) {
+	getElem('#character-name').value = randomName()
 }
