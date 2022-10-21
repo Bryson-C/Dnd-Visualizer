@@ -9,6 +9,7 @@
 #dice-menu input {
     width: 100px;
     min-width: 50px;
+    margin: 1px;
 }
 #dice-result {
     border: black solid 1px;
@@ -16,6 +17,7 @@
     max-width: 100px;
     width: 20px;
     padding: 5px;
+    margin: 5px;
 }
 #max-dice-number {}
 #dice-roller {}

@@ -6,10 +6,13 @@
 
     <link rel="stylesheet" href="style/dice-menu.css">
     <link rel="stylesheet" href="style/character-menu.css">
+    <link rel="stylesheet" href="style/character-creator.css">
 
-    <script src="scripts/common.js"></script>
+    <script defer src="scripts/common.js"></script>
     <script defer src="scripts/dice-menu.js"></script>
     <script defer src="scripts/character.js"></script>
+    <script defer src="scripts/character-creator.js"></script>
+
 </head>
 <body>
 
@@ -21,18 +24,64 @@
     <span id="dice-result"> </span>
 </div>
 
+<div id="character-creator">
 
-<div id="character-menu">
-    <label>Name <input type="text" id="character-name"></label>
-    &nbsp;
-    <label>Health <progress class="character-status-bar" id="health-bar" value="50" max="100"></progress></label>
-    &nbsp;
-    <label>Experience <progress class="character-status-bar" id="exp-bar" value="50" max="100"></progress></label>
-    &nbsp;
+    <div id="character-creator-basics">
+        <input id="character-creator-name" type="text" placeholder="Character Name">
+        <input id="character-creator-age" type="text" placeholder="Age">
+        <select id="character-creator-class">
+            <option>Barbarian</option>
+            <option>Bard</option>
+            <option>Cleric</option>
+            <option>Druid</option>
+            <option>Fighter</option>
+            <option>Monk</option>
+            <option>Paladin</option>
+            <option>Ranger</option>
+            <option>Rogue</option>
+            <option>Sorcerer</option>
+            <option>Warlock</option>
+            <option>Wizard</option>
+        </select>
+        <button id="character-creator-create-button">Create</button>
+    </div>
+
+    <div id="character-creator-stats">
+        <input class="character-creator-stat-field" id="character-creator-stat-str" type="text" placeholder="Strength">
+        <input class="character-creator-stat-field" id="character-creator-stat-dex" type="text" placeholder="Dexterity">
+        <input class="character-creator-stat-field" id="character-creator-stat-con" type="text" placeholder="Constitution">
+        <input class="character-creator-stat-field" id="character-creator-stat-int" type="text" placeholder="Intelligence">
+        <input class="character-creator-stat-field" id="character-creator-stat-wis" type="text" placeholder="Wisdom">
+        <input class="character-creator-stat-field" id="character-creator-stat-cha" type="text" placeholder="Charisma">
+    </div>
+
+    <div id="character-creator-skills">
+        <label><input class="character-creator-skill-field" id="character-creator-skill-0" type="checkbox"> Acrobatics (Dex) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-1" type="checkbox"> Animal Handling (Wis) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-2" type="checkbox"> Arcana (Int) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-3" type="checkbox"> Athletics (Str) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-4" type="checkbox"> Deception (Cha) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-5" type="checkbox"> History (Int) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-6" type="checkbox"> Insight (Wis) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-7" type="checkbox"> Intimidation (Cha) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-8" type="checkbox"> Investigation (Int) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-9" type="checkbox"> Medicine (Wis) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-10" type="checkbox"> Nature (Int) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-11" type="checkbox"> Perception (Wis) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-12" type="checkbox"> Performance (Cha) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-13" type="checkbox"> Persuasion (Cha) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-14" type="checkbox"> Religion (Int) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-15" type="checkbox"> Sleight of Hand (Dex) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-16" type="checkbox"> Stealth (Dex) </label>
+        <label><input class="character-creator-skill-field" id="character-creator-skill-17" type="checkbox"> Survival (Wis) </label>
+    </div>
+
 </div>
 
 
+<div id="all-players-characters-menu">
 
+</div>
 
 
 

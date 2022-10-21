@@ -1,0 +1,46 @@
+#character-creator {
+    border: black solid 1px;
+    width: min-content;
+    margin: 10px;
+}
+
+
+#character-creator-basics {
+    display: flex;
+    margin: 5px;
+}
+#character-creator-name {
+    margin: 5px;
+}
+#character-creator-age {
+    margin: 5px;
+}
+#character-creator-class {
+    margin: 5px;
+}
+#character-creator-create-button {
+    margin: 5px;
+}
+
+
+
+.character-creator-stat-field {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+#character-creator-stats {
+    display: grid;
+    width: 90%;
+    margin: auto;
+}
+
+
+.character-creator-skill-field {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+#character-creator-skills {
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+}

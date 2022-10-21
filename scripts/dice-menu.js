@@ -19,7 +19,7 @@ getElem('#dice-roller').addEventListener('click', (e) => {
     for (let i = 0; i < diceCount.value; i++) {
         let random = randomInt(maxDiceNumber.value, 1)
         resultBox.innerText += random
-        if (i < diceCount-1)
+        if (i < diceCount.value-1)
             resultBox.innerText += ", "
 
     }

@@ -196,9 +196,32 @@ class Character {
         this.spells = ['']
         this.spellSlots = 0
     };
-
 }
 
-if (getElem('#character-name').innerText.length <= 0) {
-	getElem('#character-name').value = randomName()
+/*
+let allCharacters = []
+
+function createCharacter() {
+	let character = Character;
+	character.prototype.name = randomName();
+
+	allCharacters.push(character)
+
+	return character
 }
+
+function loadAllCharacters(menuIdentity) {
+	let allCharactersMenu = getElem(menuIdentity)
+	let newCharacter = createElem('span', `player $iteration`, 'character-card')
+	let iteration = 0
+	for (let character of allCharacters) {
+		let newCharacter = createElem('span', `player $iteration`, 'character-card')
+		newCharacter.style.backgroundColor = "blue"
+		newCharacter.innerText = '';
+		allCharactersMenu.appendChild(newCharacter)
+		iteration++
+	}
+}
+
+document.onload = () => createCharacter()
+*/
