@@ -19,17 +19,34 @@
 
 <div id="dice-menu">
     <button id="dice-roller">Roll</button>
-    <input id="max-dice-number" type="text" placeholder="Max Dice Number" value="20">
+    <input id="max-dice-number" type="text" placeholder="Dice Sides" value="20">
     <input id="dice-count" type="text" placeholder="Dice Count" value="1">
-    <span id="dice-result"> </span>
+    <div id="dice-result"></div>
+</div>
+
+<div id="allocate-stats-menu">
+    <span id="allocate-stats-menu-stat-str">Strength</span>
+    <span id="allocate-stats-menu-stat-dex">Dexterity</span>
+    <span id="allocate-stats-menu-stat-con">Constitution</span>
+    <span id="allocate-stats-menu-stat-int">Intelligence</span>
+    <span id="allocate-stats-menu-stat-wis">Wisdom</span>
+    <span id="allocate-stats-menu-stat-cha">Charisma</span>
+    <span id="allocate-stats-menu-close" onclick="closeAllocateStatsMenu()">
+        <img src="img/close.png" alt="" width="16" height="16">
+        Close
+    </span>
 </div>
 
 <div id="character-creator">
+    <div id="character-creator-head">
+        Character Creator
+        <button id="character-creator-minimize-button" style="float: right;" onclick="toggleCharacterCreation()">Toggle</button>
+    </div>
 
     <div id="character-creator-basics">
         <input id="character-creator-name" type="text" placeholder="Character Name">
         <input id="character-creator-age" type="text" placeholder="Age">
-        <select id="character-creator-class">
+        <select id="character-creator-class" name="Class">
             <option>Barbarian</option>
             <option>Bard</option>
             <option>Cleric</option>
