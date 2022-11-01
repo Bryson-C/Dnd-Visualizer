@@ -1,5 +1,4 @@
 
-
 enum CommandOperation {
     NONE,
     SAY
@@ -18,5 +17,6 @@ function add(x: number, y: number): number {
     return x + y;
 }
 
+let g_CommandQueue: Command[] = [];
 
 
