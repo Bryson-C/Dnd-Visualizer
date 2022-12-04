@@ -1,0 +1,36 @@
+#executive-bar {
+    margin: auto;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    background: linear-gradient(150deg, rgba(252,134,14,1) 0%, rgba(165,23,245,1) 37%, rgba(9,9,121,1) 60%, rgba(0,212,255,1) 100%);
+    border: whitesmoke 2px solid;
+    border-top: none;
+
+    display: flex;
+    justify-content: center;
+}
+#executive-bar button {
+    height: 40px;
+    width: 100%;
+    background-color: mediumslateblue;
+    color: whitesmoke;
+    border: whitesmoke 1px solid;
+    padding: 10px;
+    transition: .5s;
+}
+#executive-bar button:hover {
+    background-color: #594db6;
+}
+:root {
+    --btn-group-end-border: 0px 20px 20px 0px;
+    --btn-group-start-border: 20px 0px 0px 20px;
+}
+#executive-bar #start-btn-group {
+    border-radius: var(--btn-group-start-border);
+}
+#executive-bar #end-btn-group {
+    border-radius: var(--btn-group-end-border);
+}

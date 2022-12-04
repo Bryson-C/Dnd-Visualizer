@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "sourceMap": false
+    },
+    "files": [
+        "./Character.ts",
+        "./SaveData.ts",
+    ]
+}

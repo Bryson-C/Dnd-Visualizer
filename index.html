@@ -1,105 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DND</title>
+    <title>Menu</title>
 
-    <link rel="stylesheet" href="style/dice-menu.css">
-    <link rel="stylesheet" href="style/character-menu.css">
-    <link rel="stylesheet" href="style/character-creator.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/executive-bar.css">
+    <link rel="stylesheet" href="style/character-view.css">
 
-    <script defer src="scripts/common.js"></script>
-    <script defer src="scripts/dice-menu.js"></script>
-    <script defer src="scripts/character.js"></script>
-    <script defer src="scripts/character-creator.js"></script>
-
+    <script defer type="module" src="scripts/SaveData.js"></script>
+    <script defer type="module" src="scripts/Character.js"></script>
 </head>
+
 <body>
 
+<div id="executive-bar">
 
-<div id="dice-menu">
-    <button id="dice-roller">Roll</button>
-    <input id="max-dice-number" type="text" placeholder="Dice Sides" value="20">
-    <input id="dice-count" type="text" placeholder="Dice Count" value="1">
-    <div id="dice-result"></div>
-</div>
-
-<div id="allocate-stats-menu">
-    <span id="allocate-stats-menu-stat-str">Strength</span>
-    <span id="allocate-stats-menu-stat-dex">Dexterity</span>
-    <span id="allocate-stats-menu-stat-con">Constitution</span>
-    <span id="allocate-stats-menu-stat-int">Intelligence</span>
-    <span id="allocate-stats-menu-stat-wis">Wisdom</span>
-    <span id="allocate-stats-menu-stat-cha">Charisma</span>
-    <span id="allocate-stats-menu-close" onclick="closeAllocateStatsMenu()">
-        <img src="img/close.png" alt="" width="16" height="16">
-        Close
-    </span>
-</div>
-
-<div id="character-creator">
-    <div id="character-creator-head">
-        Character Creator
-        <button id="character-creator-minimize-button" style="float: right;" onclick="toggleCharacterCreation()">Toggle</button>
-    </div>
-
-    <div id="character-creator-basics">
-        <input id="character-creator-name" type="text" placeholder="Character Name">
-        <input id="character-creator-age" type="text" placeholder="Age">
-        <select id="character-creator-class" name="Class">
-            <option>Barbarian</option>
-            <option>Bard</option>
-            <option>Cleric</option>
-            <option>Druid</option>
-            <option>Fighter</option>
-            <option>Monk</option>
-            <option>Paladin</option>
-            <option>Ranger</option>
-            <option>Rogue</option>
-            <option>Sorcerer</option>
-            <option>Warlock</option>
-            <option>Wizard</option>
-        </select>
-        <button id="character-creator-create-button">Create</button>
-    </div>
-
-    <div id="character-creator-stats">
-        <input class="character-creator-stat-field" id="character-creator-stat-str" type="text" placeholder="Strength">
-        <input class="character-creator-stat-field" id="character-creator-stat-dex" type="text" placeholder="Dexterity">
-        <input class="character-creator-stat-field" id="character-creator-stat-con" type="text" placeholder="Constitution">
-        <input class="character-creator-stat-field" id="character-creator-stat-int" type="text" placeholder="Intelligence">
-        <input class="character-creator-stat-field" id="character-creator-stat-wis" type="text" placeholder="Wisdom">
-        <input class="character-creator-stat-field" id="character-creator-stat-cha" type="text" placeholder="Charisma">
-    </div>
-
-    <div id="character-creator-skills">
-        <label><input class="character-creator-skill-field" id="character-creator-skill-0" type="checkbox"> Acrobatics (Dex) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-1" type="checkbox"> Animal Handling (Wis) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-2" type="checkbox"> Arcana (Int) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-3" type="checkbox"> Athletics (Str) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-4" type="checkbox"> Deception (Cha) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-5" type="checkbox"> History (Int) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-6" type="checkbox"> Insight (Wis) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-7" type="checkbox"> Intimidation (Cha) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-8" type="checkbox"> Investigation (Int) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-9" type="checkbox"> Medicine (Wis) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-10" type="checkbox"> Nature (Int) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-11" type="checkbox"> Perception (Wis) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-12" type="checkbox"> Performance (Cha) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-13" type="checkbox"> Persuasion (Cha) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-14" type="checkbox"> Religion (Int) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-15" type="checkbox"> Sleight of Hand (Dex) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-16" type="checkbox"> Stealth (Dex) </label>
-        <label><input class="character-creator-skill-field" id="character-creator-skill-17" type="checkbox"> Survival (Wis) </label>
-    </div>
+        <button id="start-btn-group">Menu</button>
+        <button>Character</button>
+        <button id="end-btn-group">Skills</button>
 
 </div>
 
 
-<div id="all-players-characters-menu">
-
+<div class="card-centered" id="character-stat-view-menu">
+    <div class="card-header">Character Statistics
+        <select id="character-stat-view-character-select"></select>
+    </div>
+    <div class="card-split">
+        <div>
+            <div class="character-stat-view"> Strength <span id="character-stat-view-str"></span> </div>
+            <div class="character-stat-view"> Dexterity <span id="character-stat-view-dex"></span> </div>
+            <div class="character-stat-view"> Constitution <span id="character-stat-view-con"></span> </div>
+            <div class="character-stat-view"> Wisdom <span id="character-stat-view-wis"></span> </div>
+            <div class="character-stat-view"> Intelligence <span id="character-stat-view-int"></span> </div>
+            <div class="character-stat-view"> Charisma <span id="character-stat-view-chr"></span> </div>
+        </div>
+        <div>
+            <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </span>
+        </div>
+    </div>
 </div>
-
 
 
 </body>
