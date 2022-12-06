@@ -1,0 +1,32 @@
+#main-content-pane {
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  grid-template-rows: 100%;
+}
+#main-content-pane #info-pane {
+  outline: whitesmoke solid 1px;
+  padding: 10px;
+}
+#main-content-pane #content-pane {
+  outline: whitesmoke solid 1px;
+  padding: 10px;
+}
+#main-content-pane #social-pane {
+  outline: whitesmoke solid 1px;
+  padding: 10px;
+}
+#main-content-pane .character-stat-view {
+  margin-top: 5px;
+}
+
+.character-stat-view {
+  width: fit-content;
+}
+.character-stat-view button {
+  width: 10%;
+}
+.character-stat-view input {
+  width: 20%;
+}
+
+/*# sourceMappingURL=main-content-pane.css.map */

@@ -1,20 +1,17 @@
 #executive-bar {
-    margin: auto;
     text-align: center;
-    border-radius: 0px 0px 10px 10px;
-    width: 50%;
+    width: 100%;
     padding: 10px;
     font-size: 20px;
     background: linear-gradient(150deg, rgba(252,134,14,1) 0%, rgba(165,23,245,1) 37%, rgba(9,9,121,1) 60%, rgba(0,212,255,1) 100%);
-    border: whitesmoke 2px solid;
-    border-top: none;
-
+    border-bottom: whitesmoke 2px solid;
     display: flex;
+    position: sticky;
     justify-content: center;
 }
 #executive-bar button {
     height: 40px;
-    width: 100%;
+    width: 20%;
     background-color: mediumslateblue;
     color: whitesmoke;
     border: whitesmoke 1px solid;

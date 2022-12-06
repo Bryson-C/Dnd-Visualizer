@@ -1,0 +1,35 @@
+
+@mixin base-pane()
+    outline: whitesmoke solid 1px
+    padding: 10px
+
+@mixin character-stat-view-base-stat()
+    margin-top: 5px
+
+#main-content-pane
+    display: grid
+    grid-template-columns: 30% 50% 20%
+    grid-template-rows: 100%
+
+    #info-pane
+        @include base-pane
+
+    #content-pane
+        @include base-pane
+
+    #social-pane
+        @include base-pane
+
+    .character-stat-view
+        @include character-stat-view-base-stat
+
+
+
+.character-stat-view
+    width: fit-content
+    button
+        width: 10%
+    input
+        width: 20%
+
+

@@ -6,10 +6,12 @@
 
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/executive-bar.css">
-    <link rel="stylesheet" href="style/character-view.css">
+    <link rel="stylesheet" href="style/main-content-pane.css">
 
-    <script defer type="module" src="scripts/SaveData.js"></script>
-    <script defer type="module" src="scripts/Character.js"></script>
+    <script defer type="module" src="scripts/save-data.js"></script>
+    <script defer type="module" src="scripts/character.js"></script>
+    <script defer type="module" src="scripts/character.js"></script>
+    <script defer type="module" src="scripts/character-stat-viewer.js"></script>
 </head>
 
 <body>
@@ -22,28 +24,45 @@
 
 </div>
 
+<div id="main-content-pane">
 
-<div class="card-centered" id="character-stat-view-menu">
-    <div class="card-header">Character Statistics
-        <select id="character-stat-view-character-select"></select>
-    </div>
-    <div class="card-split">
-        <div>
-            <div class="character-stat-view"> Strength <span id="character-stat-view-str"></span> </div>
-            <div class="character-stat-view"> Dexterity <span id="character-stat-view-dex"></span> </div>
-            <div class="character-stat-view"> Constitution <span id="character-stat-view-con"></span> </div>
-            <div class="character-stat-view"> Wisdom <span id="character-stat-view-wis"></span> </div>
-            <div class="character-stat-view"> Intelligence <span id="character-stat-view-int"></span> </div>
-            <div class="character-stat-view"> Charisma <span id="character-stat-view-chr"></span> </div>
+    <div id="info-pane">
+        <div id="character-all-stat-container">
+            <div class="character-stat-view"> Strength
+                <button style="float:right;" id="character-stat-view-str-inc-btn">+</button>
+                <input style="float:right;" type="text" id="character-stat-view-str" value="10">
+                <button style="float:right;" id="character-stat-view-str-dec-btn">-</button>
+            </div>
+            <div class="character-stat-view"> Dexterity
+                <button style="float:right;" id="character-stat-view-dex-inc-btn">+</button>
+                <input style="float:right;" type="text" id="character-stat-view-dex" value="10">
+                <button style="float:right;" id="character-stat-view-dex-dec-btn">-</button>
+            </div>
+            <div class="character-stat-view"> Constitution
+                <button style="float:right;" id="character-stat-view-con-inc-btn">+</button>
+                <input style="float:right;" type="text" id="character-stat-view-con" value="10">
+                <button style="float:right;" id="character-stat-view-con-dec-btn">-</button>
+            </div>
+            <div class="character-stat-view"> Wisdom
+                <button style="float:right;" id="character-stat-view-wis-inc-btn">+</button>
+                <input style="float:right;" type="text" id="character-stat-view-wis" value="10">
+                <button style="float:right;" id="character-stat-view-wis-con-btn">-</button>
+            </div>
+            <div class="character-stat-view"> Intelligence
+                <button style="float:right;" id="character-stat-view-int-inc-btn">+</button>
+                <input style="float:right;" type="text" id="character-stat-view-int" value="10">
+                <button style="float:right;" id="character-stat-view-int-dec-btn">-</button>
+            </div>
+            <div class="character-stat-view"> Charisma
+                <button style="float:right;" id="character-stat-view-chr-inc-btn">+</button>
+                <input style="float:right;" type="text" id="character-stat-view-chr" value="10">
+                <button style="float:right;" id="character-stat-view-chr-dec-btn">-</button>
+            </div>
         </div>
-        <div>
-            <span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </span>
-        </div>
     </div>
+    <div id="content-pane"> content </div>
+    <div id="social-pane"> social </div>
+
 </div>
 
 

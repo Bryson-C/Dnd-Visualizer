@@ -11,7 +11,11 @@ body {
     margin: 0px;
 }
 
-.card-centered {
+#text-aligned {
+    float: right;
+}
+
+.card {
     margin: auto;
     margin-top: 20px;
     padding: 20px;
@@ -22,9 +26,10 @@ body {
     font-size: 20px;
 }
 .card-header {
-    align-content: center;
     text-align: center;
     font-size: 40px;
+    text-decoration: underline;
+    text-decoration-color: mediumslateblue;
 }
 .card-split {
     display: grid;
@@ -32,4 +37,8 @@ body {
 }
 .card-split div {
     margin: 10px;
+}
+.character-stat-view {
+    padding: 10px;
+    border: whitesmoke solid 1px;
 }
